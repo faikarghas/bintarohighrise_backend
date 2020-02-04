@@ -26,9 +26,10 @@ module.exports = {
     },
 
     get : (req,res) => {
-        let sql = 'select * from leads_form order by timestamp DESC'
+        let sql = `select name,email,phoneNumber,category, DATE_FORMAT(timestamp, '%d-%m-20%y   %H:%i:%S') AS timestamp from leads_form order by timestamp DESC`
 
         db.query(sql,(err,result)=>{
+            console.log(result);
             res.send(result)
         })
     }

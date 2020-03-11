@@ -7,7 +7,8 @@ module.exports = {
             name: req.body.name,
             email: req.body.email,
             phoneNumber: req.body.phoneNumber,
-            category: req.body.category
+            category: req.body.category,
+            utmSource: req.body.utmSource,
         }
 
         console.log(data);

@@ -6,6 +6,8 @@ router.use(bodyParser.json())
 
 router.post('/postform', controller.post)
 router.get('/getform', controller.get)
+router.post('/postwa', controller.postwa)
+
 
 
 module.exports = router;

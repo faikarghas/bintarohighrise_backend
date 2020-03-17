@@ -33,5 +33,24 @@ module.exports = {
             console.log(result);
             res.send(result)
         })
+    },
+
+    postwa: (req,res) => {
+        let data = {
+            phoneNumber: req.body.phoneNumber,
+        }
+
+        let sql = 'insert into wa set ?'
+
+        db.query(sql, data, (err, result)=>{
+            if (err) {
+                res.json({success:false,message:'gagal post'})
+                console.log(err);
+            } else {
+                res.json({success:true,message:'post'})
+                console.log(result);
+
+            }
+        })
     }
 }

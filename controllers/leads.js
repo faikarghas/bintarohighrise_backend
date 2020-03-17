@@ -52,5 +52,14 @@ module.exports = {
 
             }
         })
+    },
+
+    getwa : (req,res) => {
+        let sql = `select * from wa order by idwa DESC`
+
+        db.query(sql,(err,result)=>{
+            console.log(result);
+            res.send(result)
+        })
     }
 }

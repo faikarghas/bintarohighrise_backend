@@ -9,6 +9,8 @@ module.exports = {
             phoneNumber: req.body.phoneNumber,
             category: req.body.category,
             utmSource: req.body.utmSource,
+            utmMedium: req.body.utmMedium,
+            utmCampaign: req.body.utmCampaign
         }
 
         console.log(data);
@@ -21,7 +23,6 @@ module.exports = {
             } else {
                 res.json({success:true,message:'post'})
                 console.log(result);
-
             }
         })
     },

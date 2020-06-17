@@ -39,7 +39,10 @@ module.exports = {
     postwa: (req,res) => {
         let data = {
             phoneNumber: req.body.phoneNumber,
-            source: req.body.source
+            source: req.body.source,
+            utmSource: req.body.utmSource,
+            utmMedium: req.body.utmMedium,
+            utmCampaign: req.body.utmCampaign,
         }
 
         let sql = 'insert into wa set ?'

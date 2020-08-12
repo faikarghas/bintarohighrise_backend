@@ -10,7 +10,8 @@ module.exports = {
             category: req.body.category,
             utmSource: req.body.utmSource,
             utmMedium: req.body.utmMedium,
-            utmCampaign: req.body.utmCampaign
+            utmCampaign: req.body.utmCampaign,
+            page: req.body.page
         }
 
         console.log(data);
@@ -18,7 +19,7 @@ module.exports = {
         let sql = 'insert into leads_form set ?'
         db.query(sql, data, (err, result)=>{
             if (err) {
-                res.json({success:false,message:'gagal post'})
+                res.json({success:false,message:'gagal post',error:err})
                 console.log(err);
             } else {
                 res.json({success:true,message:'post'})

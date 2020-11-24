@@ -36,7 +36,16 @@ module.exports = {
             res.send(result)
         })
     },
+    
+    getp : (req,res) => {
+        let sql = `select * from project`
 
+        db.query(sql,(err,result)=>{
+            console.log(result);
+            res.send(result)
+        })
+    },
+    
     postwa: (req,res) => {
         let data = {
             phoneNumber: req.body.phoneNumber,

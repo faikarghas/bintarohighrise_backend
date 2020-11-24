@@ -5,6 +5,7 @@ const fileUpload        = require('express-fileupload');
 
 const leads           = require('../routes/leads');
 const auth           = require('../routes/authentication');
+const api           = require('../routes/api');
 
 const app       = express();
 
@@ -17,6 +18,7 @@ app.use('/images', express.static(__dirname + '/../document'));
 
 app.use('/api', leads);
 app.use('/api',auth)
+app.use('/api',api)
 
 
 app.use(logger('dev'))

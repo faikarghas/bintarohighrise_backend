@@ -9,6 +9,7 @@ router.get('/getform', controller.get)
 router.post('/postwa', controller.postwa)
 router.get('/getwa', controller.getwa)
 
+router.get('/getp', controller.getp)
 
 
 module.exports = router;

@@ -35,7 +35,7 @@ module.exports = {
 
     },
     getBannerHome:(req,res) => {
-        let sql = `select * from slider  where page = 'home'`
+        let sql = `select * from slider2`
 
         db.query(sql, (err, result) => {
             if(err) {

@@ -6,5 +6,8 @@ router.use(bodyParser.json())
 
 router.post('/bannerHome',controller.insertBannerHome)
 router.get('/getbannerHome',controller.getBannerHome)
+router.post('/deleteBannerHome',controller.deleteBannerHome)
+// router.post('/editBannerHome',controller.editBannerHome)
+
 
 module.exports = router

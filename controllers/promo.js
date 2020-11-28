@@ -116,5 +116,17 @@ module.exports = {
             }
         })
     },
+    getPromoSlider : (req,res) => {
+        let sql = `select * from gallery where ref_id = '${req.params.slug}'`;
+
+        db.query(sql, (err, result) => {
+            if(err) {
+                console.log(err);
+            } else {
+                console.log(result);
+                res.status(201).send(result)
+            }
+        })
+    },
 
 }

@@ -104,5 +104,17 @@ module.exports = {
             }
         })
     },
+    getPromo : (req,res) => {
+        let sql = `select * from global_data where pvar2 = '${req.params.slug}'`;
+
+        db.query(sql, (err, result) => {
+            if(err) {
+                console.log(err);
+            } else {
+                console.log(result);
+                res.status(201).send(result)
+            }
+        })
+    },
 
 }

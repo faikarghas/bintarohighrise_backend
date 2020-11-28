@@ -7,6 +7,7 @@ router.use(bodyParser.json())
 // router.post('/bannerPromo',controller.insertBannerPromo)
 // router.get('/getbannerPromo/:slug',controller.getBannerPromo)
 router.get('/getTextPromo/:slug',controller.getTextPromo)
+router.get('/getPromo/:slug',controller.getPromo)
 
 // router.post('/deleteBannerPromo',controller.deleteBannerPromo)
 // router.get('/editBannerPromo',controller.editBannerPromo)
